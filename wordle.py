@@ -76,7 +76,7 @@ def main():
         print(*indices, sep=' ')
     print(f"\n{colored('Dommage','red')}, vous avez épuisé votre nombre de chances.\nLe mot était ",
           *[colored(l.upper(),'red',attrs=['bold']) for l in mot_secret_accents])
-    return input("Pour rejouer entrez 'oui'.")
+    return input("Pour rejouer entrez 'oui'.\n")
 
 
 dic_sans_accents = []

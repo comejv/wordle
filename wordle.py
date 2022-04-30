@@ -109,8 +109,15 @@ for e in dic_accents:
 print(COLOR["BOLD"] + "Trouvez le mot secret en proposant des mots de même taille !" + COLOR["ENDC"] +
       "\nUne lettre est absente du mot secret si marquée" + COLOR["RED"] + " rouge" + COLOR["ENDC"] +
       ", présente mais au mauvais emplacement avec" + COLOR["BLUE"] + " bleu" + COLOR["ENDC"] +
-      ", et au bon emplacement avec" + COLOR["GREEN"] + " vert" + COLOR["ENDC"] + ".\nBonne chance !")
+      ", et au bon emplacement avec" + COLOR["GREEN"] + " vert" + COLOR["ENDC"] + ".\nEntrez 'stop' à tout moment pour quitter le jeu.",
+      "\nBonne chance !")
+
+
 jeu = 'oui'
 while jeu == 'oui':
-    jeu = main()
+    try:
+        jeu = main()
+    except KeyboardInterrupt:
+        print("\rA bientôt !")
+        exit(1)
 print("A bientôt !")
